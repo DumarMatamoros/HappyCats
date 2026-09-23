@@ -32,11 +32,8 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-/**
- * Coordina la navegación entre pantallas mediante elevación de estado (state hoisting):
- * el estado de la pantalla actual y del gato seleccionado vive aquí, y cada pantalla
- * hija recibe callbacks para notificar eventos de navegación, sin usar NavHost.
- */
+
+//Patrón de elevación de estados:
 @Composable
 fun HappyCatsApp(modifier: Modifier = Modifier) {
     var currentScreen by remember { mutableStateOf(CatAppScreen.HOME) }
